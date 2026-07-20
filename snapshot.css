@@ -101,7 +101,7 @@ b {
 }
 
 .avatar-link {
-  cursor: zoom-in;
+  cursor: default;
   display: block;
   width: 210px;
 }

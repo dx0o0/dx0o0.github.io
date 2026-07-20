@@ -10,7 +10,7 @@
     body.classList.toggle("lang-en", lang === "en");
     document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
     try {
-      localStorage.setItem("qzkinhit-home-lang", lang);
+      localStorage.setItem("xiaoou-ding-home-lang", lang);
     } catch (error) {
       return;
     }
@@ -19,7 +19,7 @@
   if (toggle) {
     var storedLanguage = "zh";
     try {
-      storedLanguage = localStorage.getItem("qzkinhit-home-lang") || "zh";
+      storedLanguage = localStorage.getItem("xiaoou-ding-home-lang") || "zh";
     } catch (error) {
       storedLanguage = "zh";
     }
