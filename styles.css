@@ -44,6 +44,12 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
 button {
   color: inherit;
   font: inherit;
@@ -618,6 +624,11 @@ h1 {
   max-width: 900px;
 }
 
+.publication-board p a {
+  color: var(--blue);
+  font-weight: 850;
+}
+
 .publication-tags,
 .paper-tags,
 .paper-links {
@@ -725,6 +736,10 @@ h1 {
 .paper-visual.image-visual img {
   background: #fff;
   object-fit: cover;
+}
+
+.paper-visual.poster-visual img {
+  object-position: center 18%;
 }
 
 .paper-visual.text-visual {
@@ -961,202 +976,6 @@ h1 {
 .award-emblem > strong {
   font-size: 1.18rem;
   line-height: 1.2;
-}
-
-.visual-dmco {
-  background:
-    radial-gradient(circle at 22% 76%, rgba(232, 93, 79, 0.9) 0 6px, transparent 7px),
-    radial-gradient(circle at 48% 52%, rgba(15, 118, 110, 0.9) 0 6px, transparent 7px),
-    radial-gradient(circle at 74% 32%, rgba(37, 99, 235, 0.92) 0 6px, transparent 7px),
-    linear-gradient(135deg, #eff6ff, #dff5ef);
-}
-
-.visual-dmco::before {
-  border-bottom: 4px solid rgba(37, 99, 235, 0.85);
-  border-left: 4px solid rgba(37, 99, 235, 0.85);
-  height: 82px;
-  left: 42px;
-  top: 70px;
-  transform: skew(-18deg);
-  width: 168px;
-}
-
-.visual-dmco::after {
-  background: linear-gradient(90deg, var(--coral) 0 28%, var(--teal) 28% 64%, var(--blue) 64%);
-  bottom: 24px;
-  height: 12px;
-  left: 32px;
-  width: 190px;
-}
-
-.visual-demandclean {
-  background:
-    linear-gradient(90deg, rgba(17, 24, 39, 0.08) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(17, 24, 39, 0.08) 1px, transparent 1px),
-    linear-gradient(135deg, #fff7ed, #e6efff);
-  background-size: 34px 34px, 34px 34px, auto;
-}
-
-.visual-demandclean::before {
-  background:
-    linear-gradient(90deg, rgba(232, 93, 79, 0.9), rgba(232, 93, 79, 0.9)) 0 0 / 46px 34px no-repeat,
-    linear-gradient(90deg, rgba(15, 118, 110, 0.88), rgba(15, 118, 110, 0.88)) 58px 40px / 46px 34px no-repeat,
-    linear-gradient(90deg, rgba(37, 99, 235, 0.88), rgba(37, 99, 235, 0.88)) 116px 80px / 46px 34px no-repeat;
-  height: 128px;
-  left: 36px;
-  top: 58px;
-  width: 176px;
-}
-
-.visual-demandclean::after {
-  border: 2px solid rgba(17, 24, 39, 0.55);
-  height: 42px;
-  left: 122px;
-  top: 82px;
-  transform: rotate(-16deg);
-  width: 42px;
-}
-
-.visual-uniclean {
-  background: linear-gradient(135deg, #ecfeff, #f8fbff);
-}
-
-.visual-uniclean::before,
-.visual-uniclean-icde::before {
-  background:
-    linear-gradient(var(--teal), var(--teal)) 0 18px / 52px 10px no-repeat,
-    linear-gradient(var(--blue), var(--blue)) 68px 18px / 52px 10px no-repeat,
-    linear-gradient(var(--amber), var(--amber)) 136px 18px / 52px 10px no-repeat,
-    linear-gradient(var(--coral), var(--coral)) 68px 76px / 52px 10px no-repeat;
-  height: 126px;
-  left: 28px;
-  top: 62px;
-  width: 196px;
-}
-
-.visual-uniclean::after,
-.visual-uniclean-icde::after {
-  border: 2px solid rgba(37, 99, 235, 0.34);
-  border-left: 0;
-  border-top: 0;
-  height: 54px;
-  left: 78px;
-  top: 83px;
-  transform: rotate(45deg);
-  width: 78px;
-}
-
-.visual-uniclean-icde {
-  background:
-    radial-gradient(circle at 72% 64%, rgba(37, 99, 235, 0.18), transparent 34%),
-    linear-gradient(135deg, #f0fdf4, #eff6ff);
-}
-
-.visual-tdc {
-  background:
-    linear-gradient(90deg, rgba(17, 24, 39, 0.06) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(17, 24, 39, 0.06) 1px, transparent 1px),
-    linear-gradient(135deg, #eff6ff, #fff7ed);
-  background-size: 28px 28px, 28px 28px, auto;
-}
-
-.visual-tdc::before {
-  border-bottom: 4px solid var(--coral);
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  height: 64px;
-  left: 34px;
-  top: 94px;
-  transform: skew(-32deg);
-  width: 176px;
-}
-
-.visual-tdc::after {
-  background: rgba(15, 118, 110, 0.86);
-  height: 3px;
-  left: 34px;
-  top: 104px;
-  transform: rotate(-8deg);
-  width: 180px;
-}
-
-.visual-cba {
-  background: linear-gradient(135deg, #fff7ed, #f8fbff);
-}
-
-.visual-cba::before {
-  background:
-    linear-gradient(var(--teal), var(--teal)) 0 88px / 32px 54px no-repeat,
-    linear-gradient(var(--amber), var(--amber)) 48px 58px / 32px 84px no-repeat,
-    linear-gradient(var(--blue), var(--blue)) 96px 36px / 32px 106px no-repeat,
-    linear-gradient(var(--coral), var(--coral)) 144px 74px / 32px 68px no-repeat;
-  bottom: 26px;
-  height: 150px;
-  left: 34px;
-  width: 186px;
-}
-
-.visual-cba::after {
-  background: rgba(17, 24, 39, 0.62);
-  height: 3px;
-  left: 28px;
-  top: 78px;
-  transform: rotate(-12deg);
-  width: 196px;
-}
-
-.visual-governance {
-  background:
-    radial-gradient(circle at 28% 36%, rgba(37, 99, 235, 0.16), transparent 26%),
-    radial-gradient(circle at 72% 68%, rgba(15, 118, 110, 0.16), transparent 28%),
-    linear-gradient(135deg, #f8fbff, #eef3fb);
-}
-
-.visual-governance::before {
-  border: 3px solid rgba(37, 99, 235, 0.7);
-  height: 96px;
-  left: 64px;
-  top: 68px;
-  transform: rotate(45deg);
-  width: 96px;
-}
-
-.visual-governance::after {
-  background:
-    radial-gradient(circle, var(--blue) 0 6px, transparent 7px) 0 0 / 50px 50px,
-    radial-gradient(circle, var(--teal) 0 6px, transparent 7px) 25px 25px / 50px 50px;
-  height: 112px;
-  left: 56px;
-  top: 68px;
-  width: 140px;
-}
-
-.visual-evidence {
-  background:
-    linear-gradient(90deg, rgba(15, 118, 110, 0.1) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(15, 118, 110, 0.1) 1px, transparent 1px),
-    linear-gradient(135deg, #f0fdfa, #fff);
-  background-size: 26px 26px, 26px 26px, auto;
-}
-
-.visual-evidence::before {
-  background:
-    radial-gradient(circle, var(--teal) 0 7px, transparent 8px) 0 0 / 64px 64px,
-    radial-gradient(circle, var(--blue) 0 7px, transparent 8px) 30px 30px / 64px 64px,
-    radial-gradient(circle, var(--coral) 0 7px, transparent 8px) 62px 6px / 64px 64px;
-  height: 126px;
-  left: 40px;
-  top: 66px;
-  width: 176px;
-}
-
-.visual-evidence::after {
-  border-top: 2px dashed rgba(17, 24, 39, 0.52);
-  height: 1px;
-  left: 48px;
-  top: 130px;
-  transform: rotate(-14deg);
-  width: 160px;
 }
 
 .software-band {
