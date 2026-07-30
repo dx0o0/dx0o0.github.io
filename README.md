@@ -28,7 +28,7 @@ Xiaoou Ding is an Associate Professor and Ph.D. supervisor at the Faculty of Com
 | --- | --- | --- |
 | 2026 | ICML | DMCO: Budget-Aware Co-Optimization of Data Cleaning and AutoML |
 | 2026 | ICDE | PROCore: Robust Core-set Selection via Pareto Multi-dimensional Optimization from Noisy Data |
-| 2026 | VLDB Demo | MAPPipe: A System for Bridging Efficiency and Quality in Data Preprocessing via Knowledge-Augmented Structural Pruning |
+| 2026 | VLDB Demo | MAPPipe: A System of Data Preprocessing Pipeline Optimization via Structural Pruning and Knowledge-augmented MCTS |
 | 2026 | IEEE TKDE | FinePar: A Fine-Grained Data Partitioning Framework for Cloud-Edge-Device Architectures |
 | 2025 | PVLDB | bNDCRepair: Cleaning both Data Errors and Inaccurate Constraints on Numerical Sequential Data |
 | 2025 | PVLDB | UniClean: A Scalable Data Cleaning Solution for Mixed Errors based on Unified Cleaners and Optimized Cleaning Workflow |
