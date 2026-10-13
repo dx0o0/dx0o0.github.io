@@ -53,3 +53,42 @@ python3 -m http.server 8000
 Then open `http://localhost:8000/`.
 
 Public pages intentionally omit the phone number, date of birth, exact office room, project budgets, grant identifiers, and certificate identifiers from the source CV.
+
+## 换电脑维护
+
+维护约定保存在 [AGENTS.md](AGENTS.md)，与网站源码一起通过 Git 同步。请将该仓库作为两台电脑间的交接依据；聊天记录和本机文件不会随 Git 自动同步。
+
+### 新电脑首次使用
+
+安装 Git，在自己选择的目录中运行：
+
+```sh
+git clone https://github.com/dx0o0/dx0o0.github.io.git
+cd dx0o0.github.io
+```
+
+打开这个克隆下来的文件夹，并先阅读 `AGENTS.md`。提交时配置维护者本人的身份，推送时使用有该仓库写入权限的 GitHub 账号；不要照抄历史提交者信息，也不要把登录令牌放进仓库。
+
+```sh
+git config user.name "你的名字"
+git config user.email "你的提交邮箱"
+```
+
+上述身份设置仅作用于当前仓库，不代表已登录 GitHub。
+
+### 每次开始与结束
+
+开始前检查是否有本地修改；工作区干净时拉取最新版本：
+
+```sh
+git status --short --branch
+git pull --ff-only
+```
+
+完成后检查差异，只暂存本次修改的文件，提交并推送到 `main`。换电脑前确认没有需要带走但尚未提交或推送的工作。另一台电脑也应先拉取，再编辑；尽量避免两台电脑同时修改同一文件。遇到冲突或分叉时先保留双方修改并检查差异，不使用强制推送或重置来覆盖。
+
+页面更新推送后，在 GitHub Actions 中查看对应提交的 Pages 部署是否成功，再打开线上主页核验。浏览器仍显示旧内容时可按 `Ctrl + F5` 强制刷新。
+
+### 本地预览
+
+本项目没有 Node.js 构建依赖。安装 Python 后可在仓库根目录启动预览：Windows 使用 `py -m http.server 8000`，其他系统通常使用 `python3 -m http.server 8000`。随后打开 `http://localhost:8000/`，结束时按 `Ctrl + C` 停止服务。
